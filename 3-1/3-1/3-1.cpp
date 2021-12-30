@@ -13,7 +13,7 @@ double getY(const double x);
 /*
 * \brief выполняет функцию
 * \param x значение переменной x
-* \return 1, в случае успеха
+* \return 0, в случае успеха
 */
 double NoGetY(const double x);
 
@@ -42,11 +42,6 @@ int main()
 }
 
 double getY(const double x)
-{
-    return 3 * sin(sqrt(x)) + 0.39 * x - 3.8;
-}
-
-double NoGetY(const double x)
 {
     return 3 * sin(sqrt(x)) + 0.39 * x - 3.8;
 }
