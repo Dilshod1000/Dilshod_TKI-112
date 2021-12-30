@@ -1,51 +1,45 @@
-﻿#include <iostream>
-#include <iomanip>
+#define _USE_MATH_DEFINES
 #include <cmath>
+#include <iostream>
+
 using namespace std;
+/*
+* @brief вычисление площади прямоугольника
+* @param A длина 1-ой стороны прямоугольника
+* @param B длина 2-ой стороны прямоугольника
+* @return площадь прямоугольника
+*/
+double getA(const double a, const double b);
 
 /*
-* \brief вычисление значения функции
-* \param x значение переменной x
-* \return значение функции
+* @brief вычисление периметра прямоугольника
+* @param A длина 1-ой стороны прямоугольника
+* @param B длина 2-ой стороны прямоугольника
+* @return периметра прямоугольника
 */
-double getY(const double x);
+double getB(const double a, const double b);
 
-/*
-* \brief выполняет функцию 
-* \param x значение переменной x
-* \return 0, в случае успеха
-*/
-double NoGetY(const double x);
-
-/*
-* \brief точка входа в программу
-* \return 0, в случае успеха
-*/
-int main() 
+int main()
 {
-  cout << fixed << setprecision(5);
-  double x = -10;
-  const auto edge = 2.3;
-  const auto step = 0.1;
+setlocale(0, "rus");
+double n;
+cout << "Введите коэффицент n: ";
+cin >> n;
+double a;
+cout << "Введите длину стороны А: ";
+cin >> a;
+double b = n * a;
+cout << "Площадь прямоугольника равна: " << getA(n, a) << endl;
+cout << "Периметр прямоугольника равен: " << getB(n, a) << endl;
 
-  for (x; x <= edge; x += step)
-  {
-    if (NoGetY(x))
-    {
-      cout << "Нет решений" << endl;
-    }
-    cout << "x = " << x << " " << "y = " << getY(x) << " " << "\n";
-  }
-
-  return 0;
 }
 
-double getY(const double x) 
+double getA(const double a, const double b)
 {
-  return 3 * sin(sqrt(x)) + 0.39 * x - 3.8);
+return (a * b);
 }
 
-double NoGetY(const double x)
+double getB(const double a, const double b)
 {
-  return 3 * sin(sqrt(x)) + 0.39 * x - 3.8;
+return (2 * (a * b));
 }
