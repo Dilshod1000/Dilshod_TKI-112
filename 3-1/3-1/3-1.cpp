@@ -29,7 +29,7 @@ int main()
     const auto edge = 2.3;
     const auto step = 0.1;
 
-    for (x; x <= edge; x += step)
+    while (x <= edge)
     {
         if (NoGetY(x))
         {
