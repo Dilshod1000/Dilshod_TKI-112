@@ -45,3 +45,7 @@ double getY(const double x)
 {
     return 3 * sin(sqrt(x)) + 0.39 * x - 3.8;
 }
+double NoGetY(const double x)
+{
+    return x > 0;
+}
